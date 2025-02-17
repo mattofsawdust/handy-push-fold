@@ -1,0 +1,43 @@
+module.exports = (req, res) => {
+  const handData = {
+    'AA': { ev: 4.37, explanation: "Premium pocket pair with the highest EV. Always push from any position." },
+    'KK': { ev: 3.68, explanation: "Second best starting hand. Strong push from any position." },
+    'QQ': { ev: 3.27, explanation: "Strong premium pair. Clear push from all positions." },
+    'JJ': { ev: 2.93, explanation: "Strong pair with good equity against most ranges." },
+    'TT': { ev: 2.59, explanation: "Strong pocket pair, profitable push in most situations." },
+    'AKs': { ev: 2.70, explanation: "Premium suited hand with strong EV and flush potential." },
+    'AKo': { ev: 2.55, explanation: "Premium offsuit hand with strong pushing value." },
+    'AQs': { ev: 2.39, explanation: "Very strong suited hand, clear push in most spots." },
+    'AQo': { ev: 2.22, explanation: "Strong offsuit ace, clear push in most spots." },
+    '99': { ev: 2.22, explanation: "Medium pair with positive EV, generally a push." },
+    '88': { ev: 1.95, explanation: "Medium pair, push in most positions." },
+    'AJs': { ev: 2.14, explanation: "Strong suited ace with good pushing value." },
+    'ATs': { ev: 1.89, explanation: "Strong suited ace, profitable push in most positions." },
+    'KQs': { ev: 1.23, explanation: "Strong suited broadway, profitable pushing hand." },
+    'QJs': { ev: 0.68, explanation: "Suited broadway, marginally profitable push." },
+    'JTs': { ev: 0.53, explanation: "Connected suited cards, marginally profitable push." },
+    'T9s': { ev: 0.40, explanation: "Medium suited connector, very marginal push." },
+    'KJo': { ev: 0.72, explanation: "Offsuit broadway, marginal but pushable." },
+    '77': { ev: 1.71, explanation: "Small pair, profitable in many situations." },
+    '66': { ev: 1.50, explanation: "Small pair, consider position but generally pushing." },
+    'K9s': { ev: 0.48, explanation: "Suited king, very marginal pushing hand." },
+    'Q9s': { ev: 0.33, explanation: "Suited queen, barely above pushing threshold." },
+    'J9s': { ev: 0.35, explanation: "Suited jack, very marginal decision." },
+    'QTo': { ev: 0.24, explanation: "Offsuit broadway, barely above threshold." },
+    'JTo': { ev: 0.21, explanation: "Offsuit connected cards, extremely marginal." },
+    'K8o': { ev: -0.04, explanation: "Offsuit king, typically a fold." },
+    'Q8o': { ev: -0.15, explanation: "Offsuit queen, clear fold." },
+    'J8o': { ev: -0.12, explanation: "Offsuit jack, generally fold." },
+    'T7o': { ev: -0.21, explanation: "Offsuit connector, always fold." },
+    'Q4s': { ev: -0.05, explanation: "Small suited queen, fold in most positions." },
+    'J6s': { ev: -0.04, explanation: "Small suited jack, fold in most spots." },
+    'T6s': { ev: -0.01, explanation: "Small suited ten, generally fold." },
+    'K7o': { ev: -0.08, explanation: "Weak king, clear fold." },
+    '85s': { ev: -0.03, explanation: "Small suited connector, generally fold." },
+    '74o': { ev: -0.50, explanation: "Small offsuit cards, never push." },
+    '63s': { ev: -0.23, explanation: "Small suited connector, clear fold." },
+    '32o': { ev: -0.84, explanation: "Weakest possible hand, always fold." }
+  };
+
+  res.status(200).json(handData);
+};
